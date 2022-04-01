@@ -1,0 +1,64 @@
+<html>
+ <head>
+  <!-- Metadat -->
+     <meta charset="UTF-8">
+     <meta name="JS-Assignment 3" content="HTML,CSS,JS">
+     
+  <title>Employee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Application name -->
+  <h1><center>Employee Management System</center></b></h1>
+  
+  <!-- Used table to maintain Employee data -->
+  <table>
+        <tr>
+            <td>
+               <!-- Form to get Employee details -->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" id="formID">
+                    <div>
+                        <label>Employee name</label>
+                        <input type="text" name="Ename" id="EnameID">
+                    </div>
+                    <div>
+                        <label>Location</label>
+                        <input type="text" name="address" id="addressID">
+                    </div>
+                    <div>
+                        <label>Emlpoyee ID</label>
+                        <input type="text" name="empID" id="empID">
+                    </div>
+                    <div>
+                        <label>Designation</label>
+                        <input type="text" name="Designation" id="DesignationID">
+                    </div>
+                    <div  class="button">
+                        <input type="submit" value="Add Employee"><br/>
+                    </div>
+                </form>
+                     <div  class="button">
+                      <input type='submit' class="button1" value='View Employees' onclick="showData1()">
+                      <p id="Edit indicator"></p>
+                    </div>
+             </td>
+             <td>
+              <table class="list" id="employeeList" border =2>
+               <thead>
+                 <tr>
+                  <th>Employee name</th>
+                  <th>Address</th>
+                  <th>Employee ID</th>
+                  <th>Designation</th>
+                 </tr>
+                </thead>
+              </table>
+           </td>
+        </tr>
+   </table>
+   <p id="error handler"></p>
+   <script src="script.js">
+   </script>
+   			
+</body>
+</html>
